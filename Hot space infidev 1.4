@@ -1,0 +1,86 @@
+print("                                        ")
+                     print("               \033[1;34;49mhot space\033[0;39;49m    ")
+                     nhot1=1
+                     print("         _____________________")
+                     print("         sua nova rede social ")
+                     print("                                        ")
+                     print("                                        ")
+                     print("                                        ")
+                     print("                                        ")
+                     print("vamos te cadastrar")
+                     print("                                        ")
+                     hotnome=input("digite seu nome:")
+                     hotNick=input("digite seu Nick:")
+                     hotsenha=input("digite sua senha:")
+                     #hotid=input("digite o id do seu leg OS:") usar quando tiver o import randon para o id
+                     while nhot1<=2:
+                         print("                                        ")
+                         print("                                        ")
+                         print("                                        ")
+                         print("                                        ")
+                         print("1-videos")
+                         print("2-mensagens")
+                         print("3-conta")
+                         print("4-loja hot")
+                         print("5-servidores")
+                         print("6-sair")
+                         perhot=int(input("digite o número do local que você quer entrar:"))
+                         if perhot==6:
+                           break
+                         elif perhot==3:
+                             print(".               ")
+                             print(".               ")
+                             print("seu nome é {}".format(hotnome))
+                             print("seu nick é {}".format(hotnick))
+                             print("sea senha é {}".format(hotsenha))
+                         elif perhot==4:
+                             print(".               ")
+                             print(".               ")
+                             print("desculpe ainda não temos produtos disponíveis ")
+                               
+                         elif perhot==1:
+                           print("ainda não temos vídeos")
+                         elif perhot==2:
+                           print("você não tem novas mensagens ")
+                         elif perhot==5:  
+                           print("procurando servidor")
+                           print(".               ")
+                           print(".               ")
+                           
+
+                           import socket
+
+
+                           porta = 8000
+
+                           sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                           try:
+                             sock.connect(('', porta))
+                           except ConnectionRefusedError:
+                             print("Falha ao conectar ao servidor")
+                             exit()
+
+
+                           msg = input("Digite sua mensagem: ")
+                           sock.send(msg.encode('utf-8'))
+
+
+                           data = sock.recv(1024)
+                           if not data:
+                             print("Servidor desconectado")
+                             exit()
+
+                           print(f"Resposta do servidor: {data.decode('utf-8')}")
+
+
+                           sock.close()
+
+                 elif hotdow=="n":
+                     print("saindo")
+                     print("a compra não foi realizada")
+                     print("                                        ")
+                     print("                                        ")
+                 else:
+                     print("ocorreu um erro")   
+                     print("                                        ")
+                     print("                                        ")
